@@ -8,6 +8,8 @@ This repository implements a Blog web application. In this application, user can
 * `users` -> registration of new users (back-end)
 * `posthub` -> sign in, sign out, routes, mongo DB (back-end)
 
+![Screenshot](/app_architecture.png)
+
 
 Besides, we cover the following aspects during the design and development of this web application.
 
