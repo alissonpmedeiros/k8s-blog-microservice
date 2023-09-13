@@ -29,7 +29,11 @@ Besides, we cover the following aspects during the design and development of thi
 * In the backend we're using `node-js/Express`
 
 ## Build the images for back-end and front-end microservices
-* 
+* build images for ```ui```
+* build images for ```users```
+* build images for ```comments```
+* build images for ```posthub```
+
 
 ## Script deployment 
 1. Deploy the aks via ```scripts/aks_deploy.md```
