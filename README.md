@@ -32,6 +32,7 @@ Besides, we cover the following aspects during the design and development of thi
 * build images for ```ui```
 * build images for ```users```
 * build images for ```comments```
+* * build images for ```posts```
 * build images for ```posthub```
 
 
