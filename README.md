@@ -28,6 +28,17 @@ Besides, we cover the following aspects during the design and development of thi
 * In the front-end we're using `nextjs`
 * In the backend we're using `node-js/Express`
 
+## Build the images for back-end and front-end microservices
+* 
+
+## Script deployment 
+1. Deploy the aks via ```scripts/aks_deploy.md```
+2. Create the ACR via ```scripts/acr_deploy.md```
+3. Create the application gateway via ```scripts/appgw_deploy.md```
+4. Deploy the certificates via ```scripts/certmgr_deploy.md```
+5. Deploy the application via ```scripts/app_deploy.md``` and ```demo-ui.yaml```
+6. Implement CI/CD via ```scripts/ci_pipeline``` and ```scripts/cd_pipeline```
+
 ## Azure DevOps Repos 
 - create a project at azure DevOps
 - Go to Repos and Push an existing repository from command line
@@ -141,7 +152,7 @@ To do so:
     - expand drop folder
     
 
-### creating pipeline for backend microservices ##
+## creating pipeline for backend microservices ##
 - go to pipelines and select edit
 - go to triggers tab and check (mark) enable container integration
 - in branch filters section
@@ -153,7 +164,7 @@ To do so:
 
 - save and queue option and save
 
-### pipeline for users microservices ##
+## pipeline for users microservices ##
 - go to pipelines and select new pipeline
 - select the classic editor option
 - confirm the right repository and branch(```main```), then click continue
@@ -170,7 +181,7 @@ To do so:
         - click on save and queue button and then  save and run button
 
 
-### pipeline for push microservices ##
+## pipeline for push microservices ##
 - go to pipelines and select new pipeline
 - select the classic editor option
 - confirm the right repository and branch(```main```), then click continue
@@ -187,7 +198,7 @@ To do so:
         - click on save and queue button and then  save and run button
 
 
-### pipeline for comments microservices ##
+## pipeline for comments microservices ##
 - go to pipelines and select new pipeline
 - select the classic editor option
 - confirm the right repository and branch(```main```), then click continue
@@ -203,7 +214,7 @@ To do so:
             - in path filters specify ```comments```
         - click on save and queue button and then  save and run button
 
-### pipeline for posthub microservices ## 
+## pipeline for posthub microservices ## 
 - go to pipelines and select new pipeline
 - select the classic editor option
 - confirm the right repository and branch(```main```), then click continue
@@ -284,7 +295,10 @@ To do so:
     - check the grant access permission in security section and save
     - select the created connection under kubernetes service connection
     - in command section, select apply and check use configuration files
-    - in configuration file, specify $(System.DefaultWorking)/$(Release.PrimaryArtifactSourceAlias)/drop/
+    - in configuration file, specify 
+        ```
+        $(System.DefaultWorking)/$(Release.PrimaryArtifactSourceAlias)/drop/
+        ```
     - at the top, click at the save button
 
 
